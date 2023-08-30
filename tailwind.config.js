@@ -4,19 +4,24 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],  theme: {
     fontFamily : {
-      main : ['Work Sans', 'sans-serif'],
-      headings : ['Archivo', 'sans-serif'],
-      text : ['Ranade', 'sans-serif']
+      text : ['Poppins', 'sans-serif']
     },
     screens: {
       'mobile' : '375px',
       'tablet': '640px',
-      'laptop': '1024px',
       'desktop': '1280px',
+    },
+    colors : {
+      'cyan' : 'hsl(180, 66%, 49%)',
+      'dark-violet' : 'hsl(257, 27%, 26%)',
+      'red' : 'hsl(0, 87%, 67%)',
+      'gray' : 'hsl(0, 0%, 75%)',
+      'grayish-violet' : 'hsl(257, 7%, 63%)',
+      'very-dark-blue' : 'hsl(255, 11%, 22%)',
+      'very-dark-violet' : 'hsl(260, 8%, 14%)'
     },
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
   ],
 }
