@@ -5,7 +5,9 @@
 /.pnp
 .pnp.js
 
+# Misc
 package-lock.json
+style-guide.md
 
 # testing
 /coverage
