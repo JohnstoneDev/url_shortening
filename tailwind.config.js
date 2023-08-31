@@ -13,7 +13,8 @@ module.exports = {
     },
     colors : {
       'cyan' : 'hsl(180, 66%, 49%)',
-      'slate-100' : '#f1f5f9',
+      'neutral' : '#fef2f2',
+      'slate-100' : 'rgb(250 250 250)',
       'dark-violet' : 'hsl(257, 27%, 26%)',
       'red' : 'hsl(0, 87%, 67%)',
       'gray' : 'hsl(0, 0%, 75%)',
