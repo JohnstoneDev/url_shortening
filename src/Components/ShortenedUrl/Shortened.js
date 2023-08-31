@@ -1,7 +1,30 @@
+import {
+	useState,
+	useEffect
+} from "react"
+
 import { Button } from "../Buttons/Button"
 
-
 const ShortenedUrl = ({ original, shortened }) => {
+	const [ copy, setCopy ] = useState(shortened);
+	const [ btnText, setBtnText ] = useState("Copy");
+
+	function copyToClipBoard(e){
+		e.preventDefault()
+
+		navigator.clipboard.writeText(copy)
+
+		setBtnText("Copied!")
+
+		setTimeout(() => {
+			setBtnText("Copy")
+		},2500)
+	}
+
+	useEffect(() => {
+		setCopy(shortened)
+	},[shortened])
+
 	return (
 		<div className="">
 			<div
@@ -12,7 +35,7 @@ const ShortenedUrl = ({ original, shortened }) => {
 					{original.substring(0, 60)}...
 				</p>
 				<a className="text-cyan" href={shortened} target="_blank" rel="noreferrer">{shortened}</a>
-				<Button>Copy</Button>
+				<Button clickFunction={copyToClipBoard}>{btnText}</Button>
 			</div>
 		</div>
 	)

@@ -37,7 +37,7 @@ const ArticleWithContent = ({ title, contents }) => {
 			<h2 className='font-semibold'>{title}</h2>
 			<div className='flex flex-col'>
 				{
-					contents.map(c => <span className="cursor-pointer hover:text-grayish-violet" key={contents.indexOf(c)}>{c}</span>)
+					contents.map(c => <span className="cursor-pointer hover:text-grayish-violet" key={Math.random() * 500}>{c}</span>)
 				}
 			</div>
 		</article>
