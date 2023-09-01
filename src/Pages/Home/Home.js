@@ -5,22 +5,10 @@ import { ShortenedCards } from "../../Components/ShortenedUrl/Shortened"
 import { Statistics } from "../../Components/Statistics/Statistics"
 import { Footer } from "../../Components/Footer/Footer"
 
+import { useUrls } from "../../Contexts/URLContext/URLContext"
 
 export const  HomeComponent = () => {
-	const exampleUrls = [
-		{
-			original : 'https://stackoverflow.com//setting-a-backgroundimage-with-react-inline-styles',
-			shortened : 'http://get.y'
-		},
-		{
-			original : 'https://stackoverflow.com//setting-a-backgroundimage-with-react-inline-styles',
-			shortened : 'http://get.y'
-		},
-		{
-			original : 'https://stackoverflow.com//setting-a-backgroundimage-with-react-inline-styles',
-			shortened : 'http://get.y'
-		}
-	]
+	const { urls } = useUrls();
 
 	return (
 		<div className="gap-4 space-y-8">
@@ -29,7 +17,7 @@ export const  HomeComponent = () => {
 					<TopComponent />
 					<UrlForm />
 				<div className="p-6 bg-neutral pt-24">
-					<ShortenedCards urls={exampleUrls}/>
+					<ShortenedCards urls={urls}/>
 					<Statistics />
 				</div>
 
